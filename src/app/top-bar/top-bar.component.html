@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['']">{{ brand | uppercase }}</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav mr-auto">
+        <a class="nav-item nav-link active" [routerLink]="['']">{{ langToggle.header.menu.item_1 }} <span
+            class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" [routerLink]="['notes']">{{ langToggle.header.menu.item_2 }}</a>
+      </ul>
+
+      <div class="d-flex">
+        <button *ngFor="let langBtn of langToggle.header.lang" (click)="changeLang(langBtn.code)"
+          class="btn btn-primary ml-2">{{ langBtn.name }}</button>
+      </div>
+    </div>
+  </div>
+</nav>
