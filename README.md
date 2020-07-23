@@ -1,3 +1,8 @@
+Start local MongoDB.
+Run `ng build` to build the project.
+Click the Start Debugging button  to run the app.
+Open `http://localhost:3000/`
+
 # AngularNotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
